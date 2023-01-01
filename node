@@ -1,0 +1,158 @@
+/*const test=require('./test');
+var a=10;
+var b=20;
+console.log(a+b);
+console.log(test.x * test.y);
+*/
+/*----------------------------------------*/
+// To import single function of module
+/* const fs=require('fs').writeFileSync;
+*/
+//--------------------------------------------
+/*const http =require('http');
+http.createServer((req,res)=>{
+    res.write('n1.js');
+    res.end();
+}).listen(5500);*/
+
+// ---------------------------------------------
+/*const color=require('colors');
+console.log("npm packages".green);
+*/
+
+//---------------------------------------
+/*console.log("Hello Nodemon");
+console.log("How are u:)");
+
+*/
+//----------------------------
+ /*const data=require('./data');
+ const http=require('http');
+ http.createServer((req,res)=>{
+    res.writeHead(200,{'content-Type':'json'});
+    res.write('Hello Ankur from other side:)');
+    res.write('-----------------');
+    res.write(JSON.stringify(data));
+    res.end();
+ }).listen(5500);
+ console.log("Task completed");*/
+
+ //-----------------------------------------------------
+/* const fs=require('fs');
+ const Input=process.argv;
+ fs.writeFileSync(Input[2],Input[3]);
+ if(Input[4]=='r'){
+    fs.unlinkSync(Input[2]);
+ }
+*/
+
+// ----------------------------------
+/*const fs=require('fs');
+const path=require('path');
+const dir=path.join(__dirname,'meridir');
+//fs.renameSync('learning.js','learn.js');
+// for(i=0;i<5;i++){
+//     fs.writeFileSync(`./meridir/Ram${i+1}.txt`,`Hello Ramji${i+1}:)`);
+//    // fs.unlinkSync(`Ram${i+1}.txt`);
+// }
+
+fs.readdir(dir,(err,file)=>{
+console.log(file[3]);
+})
+*/
+
+//----------------------------------
+/*const fs=require('fs');
+fs.writeFileSync('./meridir/ankut.txt','Hello Ankur Singh:)');
+
+*/
+//----------------------------------
+//VERY IMPORTANT --> CONCEPT OF PROMISES
+
+/*let a=20;
+let b=0;
+let WaitingData=new Promise((resolve,reject)=>{
+   setTimeout(()=>{
+      resolve(20);
+   },2000)
+})
+WaitingData.then((data)=>{
+   b=data;
+   console.log(a+b);
+})*/
+//----------------------------------------------------
+//Exprees.js
+/*--> Framework of Nodejs
+--> used to make API eaisly..
+
+*/
+/*const express=require('express');
+const app=express();
+
+app.get('',(req,res)=>{
+res.send("This is Home page");
+})
+app.get('/about',(req,res)=>{
+   res.send("This is About page");
+   })
+   app.listen(5500);
+*/
+//Routing
+/*const express=require('express');
+const app=express();
+
+app.get('',(req,res)=>{
+   console.log("The data send by browser is ",req.query.name);
+res.send("This is Home page "+ req.query.name);
+})
+app.get('/about',(req,res)=>{
+   res.send("This is About page");
+   })
+   app.listen(5500);
+   */
+   /*const express=require('express');
+   const app=express();
+   
+   app.get('',(req,res)=>{
+     
+   res.send(`<h1>This is Home page</h1> <a href="/about">Go to About</a>`);
+   
+   })
+   app.get('/about',(req,res)=>{
+      res.send(`This is About page <a href="/">Go to home</a>`);
+      })
+      app.listen(5500);
+*/
+/*const express=require('express');
+const path=require('path');
+   const app=express();
+   const publicpath=path.join(__dirname,'public');
+  // app.use(express.static(publicpath));
+  app.get('',(req,res)=>{
+ res.sendFile(`${publicpath}/about.html`);
+  })
+ 
+     
+   
+      app.listen(5500);
+
+*/
+//dynamic page
+/*const express=require('express');
+const path=require('path');
+const app=express();
+const publicpath=path.join(__dirname,'public');
+app.set('view engine','ejs');
+app.get('',(req,res)=>{
+   res.sendFile(`${publicpath}/about.html`);
+    })
+app.get('/profile',(req,res)=>{
+const data={
+   name:'Ankur Singh',
+   age:"24",
+   city:"Ranchi"
+}
+res.render('./views/profile',{data});
+})
+app.listen(5500);
+*/
